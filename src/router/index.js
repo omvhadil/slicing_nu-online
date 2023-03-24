@@ -9,10 +9,45 @@ const router = createRouter({
       component: () => import('../views/Home_page.vue')
     },
     {
+      path: '/quran',
+      name: 'Al-Quran',
+      component: () => import('../views/Al_quran.vue')
+    },
+    {
       path: '/wirid_doa',
       name: 'Wirid Doa',
       component: () => import('../views/Wirid_doa.vue')
-    }
+    },
+    {
+      path: '/jadwal_sholat',
+      name: 'Jadwal Sholat',
+      component: () => import('../views/Jadwal_sholat.vue')
+    },
+    {
+      path: '/kiblat',
+      name: 'kiblat',
+      component: () => import('../views/Kiblat.vue')
+    },
+    {
+      path: '/tahlil',
+      name: 'Tahlil',
+      component: () => import('../views/Tahlil.vue')
+    },
+    {
+      path: '/ramadhan',
+      name: 'Ramadhan',
+      component: () => import('../views/Ramadhan.vue')
+    },
+    {
+      path: '/zakat_donasi',
+      name: 'Zakat dan Donasi',
+      component: () => import('../views/Zakat_donasi.vue')
+    },
+    {
+      path: '/lainnya',
+      name: 'Lainnya',
+      component: () => import('../views/Lainnya.vue')
+    },
   ]
 })
 

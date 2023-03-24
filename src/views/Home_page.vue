@@ -15,10 +15,10 @@ import { homeMenu } from '../constans'
     <!-- menu -->
     <div class="container bg-white row row-gap-4 m-0 py-3">
       <RouterLink
-        to="/wirid_doa"
         v-for="item in homeMenu"
         :key="item.id"
         class="col-3 text-center p-0 cursor nav-link"
+        :to="item.path"
       >
         <div
           class="bg-info-subtle mx-auto rounded-circle p-1 overflow-hidden"
