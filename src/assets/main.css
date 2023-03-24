@@ -1,0 +1,20 @@
+@import url('https://fonts.googleapis.com/css2?family=Aref+Ruqaa&display=swap');
+
+#container_app{
+  max-width: 450px;
+  margin: 0 auto;
+  position: relative;
+}
+img{
+  width: 100%;
+  height: auto;
+}
+.text-small{
+  font-size: .913rem;
+}
+.text-smaller{
+  font-size: .875rem;
+}
+.cursor {
+  cursor: pointer;
+}
