@@ -14,7 +14,12 @@ import { homeMenu } from '../constans'
     </div>
     <!-- menu -->
     <div class="container bg-white row row-gap-4 m-0 py-3">
-      <div v-for="item in homeMenu" :key="item.id" class="col-3 text-center p-0 cursor">
+      <RouterLink
+        to="/wirid_doa"
+        v-for="item in homeMenu"
+        :key="item.id"
+        class="col-3 text-center p-0 cursor nav-link"
+      >
         <div
           class="bg-info-subtle mx-auto rounded-circle p-1 overflow-hidden"
           style="width: 40px; height: 40px"
@@ -22,7 +27,7 @@ import { homeMenu } from '../constans'
           <img src="../assets/image/quran-icon-png-1.png" alt="" />
         </div>
         <p class="text-smaller mt-1">{{ item.title }}</p>
-      </div>
+      </RouterLink>
     </div>
     <!-- banner -->
     <div class="bg-white p-3 my-2">
