@@ -1,6 +1,10 @@
 <script setup>
 import { reactive } from 'vue'
 import { useRouter } from 'vue-router'
+import { wiridDoa } from '../constans'
+
+const wirid = wiridDoa.find((item) => item.title == 'wirid')
+const doa = wiridDoa.find((item) => item.title == 'doa')
 
 const router = useRouter()
 
@@ -48,34 +52,48 @@ const data = reactive({
         <input type="email" class="border-0 bg-secondary-subtle" placeholder="Cari Wirid/Doa" />
       </div>
     </form>
-    <div v-if="data.mode == 'wirid'">
-      <div class="d-flex rounded overflow-hidden mt-3 shadow-sm border" style="height: 60px">
+    <!-- Wirid -->
+    <div v-if="data.mode == 'wirid'" class="pb-4">
+      <div
+        v-for="(item, index) in wirid.category"
+        :key="item.id"
+        class="d-flex rounded overflow-hidden mt-3 shadow-sm border"
+        style="height: 60px"
+        @click="router.push('/wirid_doa/' + item.slug)"
+      >
         <div
           class="d-flex bg-primary-subtle align-items-center justify-content-center"
           style="width: 50px"
         >
-          <h6 class="m-0">1</h6>
+          <h6 class="m-0">{{ index + 1 }}</h6>
         </div>
         <div class="d-flex align-items-center ms-3">
           <div class="">
-            <h6 class="m-0 text-small">Wirid Harian</h6>
-            <span class="m-0 text-smaller">7 Bacaan</span>
+            <h6 class="m-0 text-small">{{ item.title }}</h6>
+            <span class="m-0 text-smaller">{{ item.jml }} Bacaan</span>
           </div>
         </div>
       </div>
     </div>
-    <div v-if="data.mode == 'doa'">
-      <div class="d-flex rounded overflow-hidden mt-3 shadow-sm border" style="height: 60px">
+    <!-- Doa -->
+    <div v-if="data.mode == 'doa'" class="pb-4">
+      <div
+        v-for="(item, index) in doa.category"
+        :key="item.id"
+        class="d-flex rounded overflow-hidden mt-3 shadow-sm border"
+        style="height: 60px"
+        @click="router.push('/wirid_doa/' + item.slug)"
+      >
         <div
           class="d-flex bg-primary-subtle align-items-center justify-content-center"
           style="width: 50px"
         >
-          <h6 class="m-0">1</h6>
+          <h6 class="m-0">{{ index + 1 }}</h6>
         </div>
         <div class="d-flex align-items-center ms-3">
           <div class="">
-            <h6 class="m-0 text-small">Doa Harian</h6>
-            <span class="m-0 text-smaller">2 Bacaan</span>
+            <h6 class="m-0 text-small">{{ item.title }}</h6>
+            <span class="m-0 text-smaller">{{ item.jml }} Bacaan</span>
           </div>
         </div>
       </div>

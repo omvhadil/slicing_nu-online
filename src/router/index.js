@@ -19,6 +19,11 @@ const router = createRouter({
       component: () => import('../views/Wirid_doa.vue')
     },
     {
+      path: '/wirid_doa/:slug',
+      name: 'Wirid Doa detail',
+      component: () => import('../views/Wirid_doa_cate.vue')
+    },
+    {
       path: '/jadwal_sholat',
       name: 'Jadwal Sholat',
       component: () => import('../views/Jadwal_sholat.vue')
