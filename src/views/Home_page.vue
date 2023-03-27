@@ -3,7 +3,7 @@ import { homeMenu } from '../constans'
 </script>
 <template>
   <div class="background position-absolute">
-    <img src="../assets/image/pngku.png" alt="" />
+    <img src="../assets/image/pngku-2.png" alt="" />
   </div>
   <div class="pt-4">
     <div class="container logo text-center pt- bg-white" style="height: 190px">
