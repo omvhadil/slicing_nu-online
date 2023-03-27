@@ -1,7 +1,7 @@
 <script setup></script>
 
 <template>
-  <div id="container_app" class="bg-light">
+  <div id="container_app">
     <RouterView />
   </div>
 </template>

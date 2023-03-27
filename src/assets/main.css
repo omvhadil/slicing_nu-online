@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Aref+Ruqaa&display=swap');
 
 #container_app{
-  max-width: 576px;
+  max-width: 450px;
   margin: 0 auto;
   position: relative;
 }
@@ -17,4 +17,7 @@ img{
 }
 .cursor {
   cursor: pointer;
+}
+.bg-header{
+  background-color: rgb(81, 154, 238)
 }
