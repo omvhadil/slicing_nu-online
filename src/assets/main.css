@@ -1,9 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Aref+Ruqaa&display=swap');
 
 #container_app{
-  max-width: 450px;
+  max-width: 576px;
   margin: 0 auto;
-  position: relative;
+  position: relative !important;
 }
 img{
   width: 100%;
